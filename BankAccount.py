@@ -41,4 +41,12 @@ class BankAccount:
             print("Insufficient funds")
             self.balance -= 10
 
+##########################################################################################################################################################
+# The get_balance method will print a user-friendly message with the account balance and then also return the current balance of the account.
+##########################################################################################################################################################
 
+    #get_balance function
+    def get_balance(self):
+        #print user-friendly message + return account balance
+        print(f"Your current balance is: ${self.balance}")
+        return self.balance
