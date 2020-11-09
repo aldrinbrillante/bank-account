@@ -32,4 +32,13 @@ class BankAccount:
     #withdraw function
     def withdraw(self, amount):
         #subtract amount from the balance
-        
+        self.balance -= amount
+        #print message "amount withdrawn: "$x.xx"
+        print(f"Amount Withdrawn: ${amount}")
+        #If the user tries to withdraw an amount that is greater than the current balance, print ”Insufficient funds.”
+        #and charge them with an overdraft fee of $10
+        if amount > self.balance:
+            print("Insufficient funds")
+            self.balance -= 10
+
+
