@@ -56,3 +56,12 @@ class BankAccount:
 # The annual interest rate is 1% (i.e. 0.083% per month).
 # Thus, the monthly interest is calculated by the following equation: interest = balance *  0.00083 
 ##########################################################################################################################################################
+
+    #add_interest function
+    def add_interest(self):
+        balance = self.balance
+        #monthly interest calculation: interest = balance *  0.00083 
+        interest = balance *  0.00083 
+
+
+
