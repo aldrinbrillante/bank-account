@@ -61,7 +61,9 @@ class BankAccount:
     def add_interest(self):
         balance = self.balance
         #monthly interest calculation: interest = balance *  0.00083 
-        interest = balance *  0.00083 
+        interest = balance *  0.00083
+        #add interest to current balance
+        self.balance = self.balance + interest
 
 
 
