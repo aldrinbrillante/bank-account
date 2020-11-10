@@ -90,10 +90,6 @@ class BankAccount:
 # Account 1
 # name = BankAccount("name", account number, routing number, 0)
 Aldrin = BankAccount("Aldrin", 1234567, 1111111, 0)
-# Aldrin.get_balance()
-# Aldrin.add_interest()
-# Aldrin.print_receipt()
-
 Aldrin.balance = 1000
 Aldrin.withdraw(500)
 Aldrin.deposit(25)
