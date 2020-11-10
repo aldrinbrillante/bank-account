@@ -95,7 +95,7 @@ Aldrin.add_interest()
 Aldrin.print_receipt()
 
 #insert break for terminal
-break
+print("\n")
 
 # Account 2
 Vreea = BankAccount("Vreea", 7654321, 1111111, 0)
@@ -104,12 +104,18 @@ Vreea.withdraw(50)
 Vreea.deposit(25)
 Vreea.print_receipt()
 
+#insert break for terminal
+print("\n")
+
 # Account 3 
 Karen = BankAccount("Karen", 1936295, 1111111, 0)
 Karen.balance = 500
 Karen.withdraw(50)
 Karen.deposit(10)
 Karen.print_receipt()
+
+#insert break for terminal
+print("\n")
 
 
 
