@@ -78,7 +78,7 @@ class BankAccount:
 
 
         print(f"Account Name: {self.full_name}")
-        print(f"Account Number: ****{account_str[-4:]}")
+        print(f"Account Number: ****{account_str[-4:]}") #i do bracket '-4' to subtract the 4 asterisk i placed prior to account string
         print(f"Routing Number:{self.routing_number}")
         print(f"Balance: {self.balance}")
 
