@@ -83,20 +83,38 @@ class BankAccount:
         print(f"Balance: {self.balance}")
 
 ##########################################################################################################################################################
-# Outside of the BankAccount class, define 3 different bank account examples using the BankAccount() object.
+# Outside of the BankAccount class,
+# define 3 different bank account examples using the BankAccount() object.
 ##########################################################################################################################################################
 
 # Account 1
+# name = BankAccount("name", account number, routing number, balance)
 Aldrin = BankAccount("Aldrin", 1234567, 1111111, 0)
 Aldrin.get_balance()
 Aldrin.add_interest()
 Aldrin.print_receipt()
-# print(Aldrin.add_interest())
-Aldrin.balance = 10
 
-print(Aldrin.get_balance())
-print(Aldrin.add_interest())
-print(Aldrin.print_receipt())
+#insert break for terminal
+break
+
+# Account 2
+Vreea = BankAccount("Vreea", 7654321, 1111111, 0)
+Vreea.balance = 100
+Vreea.withdraw(50)
+Vreea.deposit(25)
+Vreea.print_receipt()
+
+# Account 3 
+Karen = BankAccount("Karen", 1936295, 1111111, 0)
+Karen.balance = 500
+Karen.withdraw(50)
+Karen.deposit(10)
+Karen.print_receipt()
+
+
+
+
+
 
 
 
