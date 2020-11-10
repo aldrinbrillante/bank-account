@@ -63,7 +63,40 @@ class BankAccount:
         #monthly interest calculation: interest = balance *  0.00083 
         interest = balance *  0.00083
         #add interest to current balance
-        self.balance = self.balance + interest
+        self.balance += interest
+
+##########################################################################################################################################################
+# The print_receipt method prints a receipt with the account name, account number, and balance like this:
+#Joi Anderson
+#Account No.: ****5678
+#Routing No.: 98765432
+#Balance: $100.00 
+##########################################################################################################################################################
+
+    def print_receipt(self):
+        account_str = str(self.account_number)
+
+
+        print(f"Account Name: {self.full_name}")
+        print(f"Account Number: ****{account_str[-4:]}")
+        print(f"Routing Number:{self.routing_number}")
+        print(f"Balance: {self.balance}")
+
+##########################################################################################################################################################
+# Outside of the BankAccount class, define 3 different bank account examples using the BankAccount() object.
+##########################################################################################################################################################
+
+# Account 1
+Aldrin = BankAccount("Aldrin", 1234567, 1111111, 0)
+Aldrin.get_balance()
+Aldrin.add_interest()
+Aldrin.print_receipt()
+# print(Aldrin.add_interest())
+Aldrin.balance = 10
+
+print(Aldrin.get_balance())
+print(Aldrin.add_interest())
+print(Aldrin.print_receipt())
 
 
 
