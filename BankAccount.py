@@ -73,9 +73,9 @@ class BankAccount:
 #Balance: $100.00 
 ##########################################################################################################################################################
 
+    #define print_receipt function
     def print_receipt(self):
         account_str = str(self.account_number)
-
 
         print(f"Account Name: {self.full_name}")
         print(f"Account Number: ****{account_str[-4:]}") #i do bracket '-4' to subtract the 4 asterisk i placed prior to account string
@@ -89,7 +89,7 @@ class BankAccount:
 
 # Account 1
 # name = BankAccount("name", account number, routing number, 0)
-Aldrin = BankAccount("Aldrin", 1234567, 1111111, 0)
+Aldrin = BankAccount("Aldrin", 12345678, 1111111, 0)
 Aldrin.balance = 1000
 Aldrin.withdraw(500)
 Aldrin.deposit(25)
