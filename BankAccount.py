@@ -157,7 +157,7 @@ while True:
         print (Vreea.withdraw (int(withdraw)))
 
     elif action == "Exit":
-        pass 
+        pass
 
     else:
         print("Please select one of the following options")
