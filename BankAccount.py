@@ -7,10 +7,10 @@ class BankAccount:
     routing_number = 123456789 
 
     #required attributes
-    def __init__(self, full_name, account_number, routing_number, balance):
+    def __init__(self, full_name, account_number, balance):
         self.full_name = full_name
         self.account_number = account_number
-        self.routing_number = routing_number
+        #self.routing_number = routing_number
         self.balance = 0
 
 ##########################################################################################################################################################
@@ -103,31 +103,31 @@ def random_AccNum():
 
 # Account 1
 # name = BankAccount("name", account number, routing number, 0)
-Aldrin = BankAccount("Aldrin", random_AccNum(), 1111111, 0)
-Aldrin.balance = 1000
-Aldrin.withdraw(500)
-Aldrin.deposit(25)
-Aldrin.print_receipt()
+Aldrin = BankAccount("Aldrin", random_AccNum(), 0)
+# Aldrin.balance = 1000
+# Aldrin.withdraw(500)
+# Aldrin.deposit(25)
+# Aldrin.print_receipt()
 
 #insert break for terminal
 print("\n")
 
 # Account 2
-Vreea = BankAccount("Vreea", random_AccNum(), 1111111, 0)
-Vreea.balance = 100
-Vreea.withdraw(50)
-Vreea.deposit(25)
-Vreea.print_receipt()
+Vreea = BankAccount("Vreea", random_AccNum(), 0)
+# Vreea.balance = 100
+# Vreea.withdraw(50)
+# Vreea.deposit(25)
+# Vreea.print_receipt()
 
 #insert break for terminal
 print("\n")
 
 # Account 3 
-Karen = BankAccount("Karen", random_AccNum(), 1111111, 0)
-Karen.balance = 500
-Karen.withdraw(50)
-Karen.deposit(10)
-Karen.print_receipt()
+Karen = BankAccount("Karen", random_AccNum(), 0)
+# Karen.balance = 500
+# Karen.withdraw(50)
+# Karen.deposit(10)
+# Karen.print_receipt()
 
 #insert break for terminal
 print("\n")
@@ -139,9 +139,9 @@ print("\n")
 while True:
 
     print("Welcome to Bank ATM")
-    # print()
-    action = input("Select Action: (1) Get Balance. (2) Deposit. (3) Withdraw. ")
     
+    action = input("Select Action: (1) Get Balance. (2) Deposit. (3) Withdraw. ")
+
     if action == str(1):
         print (Vreea.print_receipt())
 
@@ -160,6 +160,12 @@ while True:
 
     else:
             print("Please select one of the following options")
+
+
+
+
+
+
 
 
 
