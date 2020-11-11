@@ -1,6 +1,11 @@
+from random import randint
+
 
 #define a BankAccount class
 class BankAccount:
+
+    routing_number = 123456789 
+
     #required attributes
     def __init__(self, full_name, account_number, routing_number, balance):
         self.full_name = full_name
@@ -82,6 +87,15 @@ class BankAccount:
         print(f"Routing Number:{self.routing_number}")
         print(f"Balance: {self.balance}")
 
+
+#randint for random deigit generator for account number 
+def random_AccNum():
+    """random 8 digit account number generator"""
+    acc_Num = ""
+    for i in range(8):
+        acc_Num += str(randint(0, 9))
+    return int(acc_Num)
+
 ##########################################################################################################################################################
 # Outside of the BankAccount class,
 # define 3 different bank account examples using the BankAccount() object.
@@ -89,7 +103,7 @@ class BankAccount:
 
 # Account 1
 # name = BankAccount("name", account number, routing number, 0)
-Aldrin = BankAccount("Aldrin", 12345678, 1111111, 0)
+Aldrin = BankAccount("Aldrin", random_AccNum(), 1111111, 0)
 Aldrin.balance = 1000
 Aldrin.withdraw(500)
 Aldrin.deposit(25)
@@ -99,7 +113,7 @@ Aldrin.print_receipt()
 print("\n")
 
 # Account 2
-Vreea = BankAccount("Vreea", 7654321, 1111111, 0)
+Vreea = BankAccount("Vreea", random_AccNum(), 1111111, 0)
 Vreea.balance = 100
 Vreea.withdraw(50)
 Vreea.deposit(25)
@@ -109,7 +123,7 @@ Vreea.print_receipt()
 print("\n")
 
 # Account 3 
-Karen = BankAccount("Karen", 1936295, 1111111, 0)
+Karen = BankAccount("Karen", random_AccNum(), 1111111, 0)
 Karen.balance = 500
 Karen.withdraw(50)
 Karen.deposit(10)
@@ -118,6 +132,34 @@ Karen.print_receipt()
 #insert break for terminal
 print("\n")
 
+
+# Bank ATM ~ Stretch Challenge 
+# Create a terminal ATM. Be sure to add a method to charge an ATM fee for withdrawing money.
+
+while True:
+
+    print("Welcome to Bank ATM")
+    # print()
+    action = input("Select Action: (1) Get Balance. (2) Deposit. (3) Withdraw. ")
+    
+    if action == str(1):
+        print (Vreea.print_receipt())
+
+    elif action == str(2):
+    
+        deposit = input("Please enter your amount to deposit: ")
+        print (Vreea.deposit (int(deposit)))
+
+    elif action == str(3):
+
+        withdraw = input("Please enter your amount to withdraw (Fee is ): ")
+        print (Vreea.withdraw (int(withdraw)))
+
+    elif action == "Exit":
+        pass
+
+    else:
+            print("Please select one of the following options")
 
 
 
