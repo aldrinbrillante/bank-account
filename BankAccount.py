@@ -69,6 +69,7 @@ class BankAccount:
         interest = balance *  0.00083
         #add interest to current balance
         self.balance += interest
+        return self.balance
 
 ##########################################################################################################################################################
 # The print_receipt method prints a receipt with the account name, account number, and balance like this:
@@ -156,20 +157,10 @@ while True:
         print (Vreea.withdraw (int(withdraw)))
 
     elif action == "Exit":
-        pass
+        pass 
 
     else:
-            print("Please select one of the following options")
-
-
-
-
-
-
-
-
-
-
+        print("Please select one of the following options")
 
 
 
