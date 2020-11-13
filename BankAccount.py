@@ -1,4 +1,5 @@
 from random import randint
+import sys
 
 
 #define a BankAccount class
@@ -104,7 +105,7 @@ def random_AccNum():
 
 # Account 1
 # name = BankAccount("name", account number, routing number, 0)
-Aldrin = BankAccount("Aldrin", random_AccNum(), 0)
+Aldrin = BankAccount("Aldrin", random_AccNum, 0)
 # Aldrin.balance = 1000
 # Aldrin.withdraw(500)
 # Aldrin.deposit(25)
@@ -137,9 +138,29 @@ print("\n")
 # Bank ATM ~ Stretch Challenge 
 # Create a terminal ATM. Be sure to add a method to charge an ATM fee for withdrawing money.
 
+print("Welcome to Brillante Bank ATM")
+
+which_user = input("Which user are you: (1) ALDRIN (2) VREEA (3) KAREN   : ")
+
+if which_user == str(1):
+    print("Hello Aldrin. Please select one of the following options: ")
+    print("\n")
+
+elif which_user == str(2):
+    print("Hello Vreea. Please select one of the following options: ")
+    print("\n")
+
+elif which_user == str(3):
+    print('Hello Karen. Please select one of the following options: ')
+    print("\n")
+
+else:
+    print("Sorry, we do not have a user by that info")
+    sys.exit()
+
 while True:
 
-    print("Welcome to Bank ATM")
+
     
     action = input("Select Action: (1) Get Balance. (2) Deposit. (3) Withdraw. ")
 
