@@ -103,66 +103,45 @@ def random_AccNum():
 # define 3 different bank account examples using the BankAccount() object.
 ##########################################################################################################################################################
 
+####################################
 # Account 1
+####################################
 # name = BankAccount("name", account number, routing number, 0)
 Aldrin = BankAccount("Aldrin", random_AccNum, 0)
-# Aldrin.balance = 1000
-# Aldrin.withdraw(500)
-# Aldrin.deposit(25)
-# Aldrin.print_receipt()
-
 #insert break for terminal
 print("\n")
 
+####################################
 # Account 2
+####################################
 Vreea = BankAccount("Vreea", random_AccNum(), 0)
-# Vreea.balance = 100
-# Vreea.withdraw(50)
-# Vreea.deposit(25)
-# Vreea.print_receipt()
-
 #insert break for terminal
 print("\n")
 
-# Account 3 
+####################################
+# Account 3
+####################################
 Karen = BankAccount("Karen", random_AccNum(), 0)
-# Karen.balance = 500
-# Karen.withdraw(50)
-# Karen.deposit(10)
-# Karen.print_receipt()
-
 #insert break for terminal
 print("\n")
 
-
+#################################################################################################
 # Bank ATM ~ Stretch Challenge 
 # Create a terminal ATM. Be sure to add a method to charge an ATM fee for withdrawing money.
+#################################################################################################
+
 
 print("Welcome to Brillante Bank ATM")
 
-# which_user = input("Which user are you: (1) ALDRIN (2) VREEA (3) KAREN   : ")
-
-# if which_user == str(1):
-#     print("Hello Aldrin. Please select one of the following options: ")
-#     print("\n")
-
-# elif which_user == str(2):
-#     print("Hello Vreea. Please select one of the following options: ")
-#     print("\n")
-
-# elif which_user == str(3):
-#     print('Hello Karen. Please select one of the following options: ')
-#     print("\n")
-
-# else:
-#     print("Sorry, we do not have a user by that info. Have a great rest of your day!")
-#     sys.exit()
 
 while True:
 
 
     which_user = input("Which user are you: (1) ALDRIN (2) VREEA (3) KAREN   : ")
 
+#################################################################################################
+# ALDRIN
+#################################################################################################
     if which_user == str(1):
         print("Hello Aldrin. Please select one of the following options: ")
         action = input("Select Action: (1) Get Balance. (2) Deposit. (3) Withdraw. ")
@@ -175,34 +154,65 @@ while True:
             deposit = input("Please enter your amount to deposit: ")
             print (Aldrin.deposit (int(deposit)))
         
-        elif action == str(3):
-            withdraw = input("Please enter your amount to withdraw (Fee is ): ")
+        elif action == str('3'):
+            withdraw = input("Please enter your amount to withdraw: ")
+            print (Aldrin.withdraw (int(withdraw)))
+        
+        else:
+            print("That was an invalid selection. Goodbye")
+            sys.exit()
+
+#################################################################################################
+# VREEA
+#################################################################################################
+    
+    if which_user == str(2):
+        print("Hello Vreea. Please select one of the following options: ")
+        action = input("Select Action: (1) Get Balance. (2) Deposit. (3) Withdraw. ")
+
+        if action == str('1'):
+            print(Vreea.print_receipt())
+            print("\n")
+
+        elif action == str('2'):
+            deposit = input("Please enter your amount to deposit: ")
+            print (Vreea.deposit (int(deposit)))
+        
+        elif action == str('3'):
+            withdraw = input("Please enter your amount to withdraw: ")
             print (Vreea.withdraw (int(withdraw)))
         
         else:
             print("That was an invalid selection. Goodbye")
             sys.exit()
 
-
-
-    # elif which_user == str(2):
-    #     print("Hello Vreea. Please select one of the following options: ")
-    #     print("\n")
-
-    # elif which_user == str(3):
-    #     print('Hello Karen. Please select one of the following options: ')
-    #     print("\n")
-
-    # else:
-    #     print("Sorry, we do not have a user by that info. Have a great rest of your day!")
-    #     sys.exit()
-
-
-
+#################################################################################################
+# KAREN
+#################################################################################################
     
+    if which_user == str(3):
+        print("Hello Karen. Please select one of the following options: ")
+        action = input("Select Action: (1) Get Balance. (2) Deposit. (3) Withdraw. ")
 
-    # else:
-    #     print("Please select one of the following options")
+        if action == str('1'):
+            print(Karen.print_receipt())
+            print("\n")
+
+        elif action == str('2'):
+            deposit = input("Please enter your amount to deposit: ")
+            print (Karen.deposit (int(deposit)))
+        
+        elif action == str('3'):
+            withdraw = input("Please enter your amount to withdraw: ")
+            print (Karen.withdraw (int(withdraw)))
+        
+        else:
+            print("That was an invalid selection. Goodbye")
+            sys.exit()
+    
+    else:
+        print("Sorry, we do not have a user by that info. Have a great rest of your day!")
+        sys.exit()
 
 
 
